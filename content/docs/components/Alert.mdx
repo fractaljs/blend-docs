@@ -1,0 +1,91 @@
+---
+title: Alert
+description: Displays important messages with optional actions.
+---
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+import AlertDemo from '@/ui/Demos/AlertDemo';
+
+
+<AlertDemo />
+
+## API Reference
+
+<TypeTable
+  className="[&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+  type={{
+    buttonType: {
+      description: 'Defines the button style variant',
+      type: 'ButtonType',
+      default: 'ButtonType.PRIMARY',
+    },
+    size: {
+      description: 'Size of the button',
+      type: 'ButtonSize',
+      default: 'ButtonSize.MEDIUM',
+    },
+    subType: {
+      description: 'Sub-type of the button (default, icon-only, link)',
+      type: 'ButtonSubType',
+      default: 'ButtonSubType.DEFAULT',
+    },
+    text: {
+      description: 'Text displayed on the button',
+      type: 'string',
+    },
+    leadingIcon: {
+      description: 'Icon displayed before the button text',
+      type: 'ElementType',
+    },
+    trailingIcon: {
+      description: 'Icon displayed after the button text',
+      type: 'ElementType',
+    },
+    isLoading: {
+      description: 'Indicates whether the button is in a loading state',
+      type: 'boolean',
+      default: 'false',
+    },
+    isDisabled: {
+      description: 'Disables the button when true',
+      type: 'boolean',
+      default: 'false',
+    },
+    ariaLabel: {
+      description: 'Accessible label for the button',
+      type: 'string',
+    },
+    ariaExpanded: {
+      description: 'Indicates if an element controlled by the button is expanded',
+      type: 'boolean',
+    },
+    ariaControls: {
+      description: 'Identifies the element controlled by the button',
+      type: 'string',
+    },
+    ariaPressed: {
+      description: 'Indicates the pressed state of a toggle button',
+      type: 'boolean | "mixed"',
+    },
+    ariaHasPopup: {
+      description: 'Indicates the presence of a popup related to the button',
+      type: 'boolean | "menu" | "listbox" | "tree" | "grid" | "dialog"',
+    },
+  }}
+/>
+
+
+
+<Tabs items={['Javascript', 'Rust', 'C++']} updateAnchor persist>
+  <Tab id="tab-js" value="Javascript">
+    AlertDemo
+  </Tab>
+  <Tab id="tab-rs" value="Rust">
+    Rust is fast
+  </Tab>
+  <Tab id="tab-cpp" value="C++">
+    `Hello World`
+  </Tab>
+</Tabs>
+
+

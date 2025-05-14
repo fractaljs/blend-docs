@@ -1,0 +1,115 @@
+---
+title: Button
+description: Displays important messages with optional actions.
+---
+
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { TypeTable } from "fumadocs-ui/components/type-table";
+import AlertDemo from "@/ui/Demos/AlertDemo";
+import Guidlelines from "@/ui/Guidlelines";
+
+<AlertDemo />
+
+## API Reference
+
+<TypeTable
+  className="[&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+  type={{
+    buttonType: {
+      description: "Defines the button style variant",
+      type: "ButtonType",
+      default: "ButtonType.PRIMARY",
+    },
+    size: {
+      description: "Size of the button",
+      type: "ButtonSize",
+      default: "ButtonSize.MEDIUM",
+    },
+    subType: {
+      description: "Sub-type of the button (default, icon-only, link)",
+      type: "ButtonSubType",
+      default: "ButtonSubType.DEFAULT",
+    },
+    text: {
+      description: "Text displayed on the button",
+      type: "string",
+    },
+    leadingIcon: {
+      description: "Icon displayed before the button text",
+      type: "ElementType",
+    },
+    trailingIcon: {
+      description: "Icon displayed after the button text",
+      type: "ElementType",
+    },
+    isLoading: {
+      description: "Indicates whether the button is in a loading state",
+      type: "boolean",
+      default: "false",
+    },
+    isDisabled: {
+      description: "Disables the button when true",
+      type: "boolean",
+      default: "false",
+    },
+    ariaLabel: {
+      description: "Accessible label for the button",
+      type: "string",
+    },
+    ariaExpanded: {
+      description:
+        "Indicates if an element controlled by the button is expanded",
+      type: "boolean",
+    },
+    ariaControls: {
+      description: "Identifies the element controlled by the button",
+      type: "string",
+    },
+    ariaPressed: {
+      description: "Indicates the pressed state of a toggle button",
+      type: 'boolean | "mixed"',
+    },
+    ariaHasPopup: {
+      description: "Indicates the presence of a popup related to the button",
+      type: 'boolean | "menu" | "listbox" | "tree" | "grid" | "dialog"',
+    },
+  }}
+/>
+
+## Usage Guidelines
+
+### Placement
+
+- The primary button would essentially garner the most attention in your layout ; use it sparingly and with absolute intent
+- The position of buttons can vary depending on the layout.
+
+This is supplementary text that can be used to add more details on this guideline point, apart from stating the do and don’t.
+
+<Guidlelines
+  doImage="/img/guidelines/button/DO_Full_Width.png"
+  dontImage="/img/guidelines/button/DONT_Full_Width.png"
+  doText="Utilize the width of the smaller layouts to emphasise the actions"
+  dontText="Do not leave awkward paddings on either side of buttons in smaller layouts like modals"
+/>
+
+This is supplementary text that can be used to add more details on this guideline point, apart from stating the do and don’t.
+
+<Guidlelines
+  doImage="/img/guidelines/button/DO_Button_Layout.png"
+  dontImage="/img/guidelines/button/DONT_Button_Layout.png"
+  doText="Utilize the width of the smaller layouts to emphasise the actions"
+  dontText="Do not leave awkward paddings on either side of buttons in smaller layouts like modals"
+/>
+
+### Variants & Emphasis
+Describes which style of this component to choose based on its importance, and how variants relate or combine.
+
+<br/>
+Using combination of buttons
+This is supplementary text that can be used to add more details on this guideline point, apart from stating the do and don’t.
+<Guidlelines
+  doImage="/img/guidelines/button/DO_Button_Combination.png"
+  dontImage="/img/guidelines/button/DONT_Button_Combination.png"
+  doText="Utilize the width of the smaller layouts to emphasise the actions"
+  dontText="Do not leave awkward paddings on either side of buttons in smaller layouts like modals"
+/>

@@ -1,3 +1,62 @@
-@import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+
+.debug {
+  outline: 1px solid red;
+}
+
+* {
+  overscroll-behavior: none;
+}
+
+/* :root {
+ --color-fd-background: hsl(0, 0%, 100%);
+}
+ 
+.dark {
+ --color-fd-background: hsl(0, 0%, 0%);
+} */
+
+.light{
+  --color-fd-background: #ffffff;
+}
+
+:root {
+  --sh-class: #2d5e9d;
+  --sh-identifier: #354150;
+  --sh-sign: #8996a3;
+  --sh-property: #0550ae;
+  --sh-entity: #249a97;
+  --sh-jsxliterals: #6266d1;
+  --sh-string: #00a99a;
+  --sh-keyword: #f47067;
+  --sh-comment: #a19595;
+  --sh-background: #f6f8fa;
+  --sh-space: transparent;
+  --sh-line: white
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sh-class: #78bced;
+    --sh-identifier: #76a4ef;
+    --sh-sign: #8996a3;
+    --sh-property: #4dc4ff;
+    --sh-entity: #34edb1;
+    --sh-jsxliterals: #8790eb;
+    --sh-string: #3ac9b0;
+    --sh-keyword: #ff7b72;
+    --sh-comment: #8b949e;
+    --sh-background: #0d111700;
+    --sh-space: transparent;
+    --sh-line: white;
+  }
+}
+
+* {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 transparent;
+}
