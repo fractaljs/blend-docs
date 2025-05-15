@@ -81,19 +81,19 @@ const CodeString: React.FC<CodeBlockProps> = ({
     <div className="rounded-lg overflow-hidden text-sm my-6 relative">
       <CopyButton copyToClipboard={copyToClipboard} isCopied={isCopied} />
 
-      <div className="relative size-full rounded-[inherit] text-[13px] py-3.5 [&_.line]:px-4 max-h-[600px]" >
-        
-        <pre
-          className="code-block overflow-auto max-h-[600px] flex-grow [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-          ref={codeRef}
-          onDoubleClick={handleDoubleClick}
-        >
-          <code
-            className={`language-${language} border-none !bg-inherit`}
-            dangerouslySetInnerHTML={{ __html: highlightedCodeHTML }}
-          />
-        </pre>
-      </div>
+      {/* <div className="relative size-full rounded-[inherit] text-xs py-3.5 [&_.line]:px-4 max-h-[600px]" > */}
+
+      <pre
+        className="code-block relative size-full rounded-[inherit] text-xs py-3.5 [&_.line]:px-4 max-h-[600px] overflow-auto flex-grow [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        ref={codeRef}
+        onDoubleClick={handleDoubleClick}
+      >
+        <code
+          className={`language-${language} border-none !bg-inherit`}
+          dangerouslySetInnerHTML={{ __html: highlightedCodeHTML }}
+        />
+      </pre>
+      {/* </div> */}
     </div>
   );
 };

@@ -8,6 +8,7 @@ import {
 import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { getMDXComponents } from "@/mdx-components";
+import { Rate } from "@/content/docs/components/rate";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -20,6 +21,10 @@ export default async function Page(props: {
 
   return (
     <DocsPage
+      breadcrumb={{
+        includePage: true,
+        // includeSeparator: true,
+      }}
       tableOfContent={{
         style: "clerk",
       }}
@@ -36,6 +41,13 @@ export default async function Page(props: {
           })}
         />
       </DocsBody>
+      <Rate
+        onRateAction={async (url, feedback) => {
+          "use server";
+          // TODO: Replace with actual Google Analytics implementation
+          console.log(`Feedback received: ${url} ${feedback}`);
+        }}
+      />
     </DocsPage>
   );
 }
